@@ -1,4 +1,4 @@
-# Chronologic Versioning 2019.05.05
+# Chronologic Versioning 2019.05.08
 
 
 
@@ -41,13 +41,13 @@ The key words "MAY", "MUST", "MUST NOT", "OPTIONAL", "RECOMMENDED", "REQUIRED", 
 
 ## Why Use Chronologic Versioning?
 
-With other versioning schemes, adherence is inconsistent and loose at best. Compliance? _Please_. To use semantic versioning as an example, it made sense when applications were released a few times a year or less. We are now in the age of continuous delivery/integration and the concept of a `v3.5.27` is lost on a web app or anything that sees rapid development and releases. Your users almost certainly have no interest in nor are able to comprehend what you append to your version numbers either. Some people could decipher `10.14.5 (18F127a)` but it is much more pleasant to read `2019.04.29.5`.
+With other versioning schemes, adherence is inconsistent and loose at best. Compliance? _Please_. To use semantic versioning as an example, it made sense when applications were released a few times a year or less. We are now in the age of continuous delivery/integration and the concept of a `v3.5.27` is lost on a web app or anything that sees rapid development and releases. Your users _almost certainly_ have no interest in nor are able to comprehend what you append to your version numbers either. Some people could decipher `10.14.5 (18F127a)` but it is **much** more pleasant to read `2019.04.29.5`.
 
 While engineers like structure and order, they also benefit from ease of use. With Chronologic Versioning, it requires almost no thought to adhere to. While other versioning schemes almost certainly have their uses still, times have changed and so has their usefulness.
 
-A pleasant side effect of using Chronologic Versioning is the ability to see at a glance which of your dependencies in a project have not been updated in a while (if these dependencies are using Chronologic Versioning).
+A pleasant side effect of using Chronologic Versioning is the ability to see _at a glance_ which of your dependencies in a project have not been updated in a while (if these dependencies are using Chronologic Versioning).
 
-Chronologic Versioning provides you with a sane way of thinking about dependency management, saving you time and hassle.
+Chronologic Versioning provides you with a sane way of thinking about dependency management, saving you time **and** hassle.
 
 If all of this sounds desirable, all you need to do to start using Chronologic Versioning is to declare that you are doing so and then follow the rules. Link to this website from your README so others know the rules and can benefit from them.
 
@@ -73,7 +73,7 @@ No, "v1.2.3" is not a chronologic version. However, prefixing a chronologic vers
 
 The Chronologic Versioning specification is authored by [Paul Anthony Webb](https://webb.page "Homepage of Paul Anthony Webb"), digital architect of fine experiences.
 
-This specification borrows heavily from [SemVer](https://semver.org "Semantic Versioning specification") and you should use it if you would like order but not ChronVer. If you'd like to leave feedback, feel free to [send me an email](mailto:netopwibby+chronver@thenetwork.email "Send Paul Anthony Webb an email about ChronVer").
+This specification borrows heavily from [SemVer](https://semver.org "Semantic Versioning specification") and you should use it if you would like order but not ChronVer. If you would like to leave feedback, feel free to [send me an email](mailto:paul@chronver.org "Send Paul Anthony Webb an email about ChronVer")!
 
 
 
