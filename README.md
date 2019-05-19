@@ -1,4 +1,4 @@
-# Chronologic Versioning 2019.05.08
+# Chronologic Versioning 2019.05.19
 
 
 
@@ -35,6 +35,8 @@ The key words "MAY", "MUST", "MUST NOT", "OPTIONAL", "RECOMMENDED", "REQUIRED", 
 
 1. In the aforementioned example of a version number in the form `A.B.C.D`, `D` is an OPTIONAL include if it is otherwise zero. For instance: `2006.04.01` is equal to `2006.04.01.0`.
 
+1. If backwards incompatible changes are introduced you MUST append a hyphen and the reserved label "break". For instance: `2006.04.03.12` > `2006.04.03.12-break`.
+
 1. Once a versioned package has been released, the contents of that version MUST NOT be modified. Any modifications MUST be released as a new version.
 
 
@@ -59,9 +61,32 @@ If all of this sounds desirable, all you need to do to start using Chronologic V
 
 Absolutely! ChronVer is all about rapid development.
 
+### This sounds neat for personal projects but how can I use this for work?
+
+Tagging feature releases is a common workflow for many teams. What follows is an example of how ChronVer could work in a multi-contributor environment.
+
+Imagine you have teams working on a feature and they split the task into UI and implementation branches.
+
+```text
+2019.05.08.14 (base release)
+├─ 2019.05.08.14-super-ui-enhance (UI fork)
+│  └─ 2019.05.08.14-super-ui-enhance.13 (UI fork, later in the day)
+└─ 2019.05.08.14-super-ui-please-work (implementation fork)
+   └─ 2019.05.08.14-super-ui-please-work.57 (implementation fork, later in the day)
+```
+
+As you can see, `super-ui-enhance` and `super-ui-please-work` are feature releases forked from the fourteenth update of a release created on `2019.05.08`.
+
+Sometime the following day, those branches might look like this:
+
+- `2019.05.09-super-ui-enhance`
+- `2019.05.09-super-ui-please-work.9`
+
+When your work is merged into the main branch you can safely omit `-FEATURE_NAME.CHANGESET_IDENTIFIER` from the version number.
+
 ### How should I handle deprecating functionality?
 
-Deprecating existing functionality is a normal part of software development and is often required to make forward progress. When you deprecate part of your public API (if it exists), you should do two things: (1) update your documentation to let users know about the change and (2) issue a new release with the deprecation in place.
+Deprecating existing functionality is a normal part of software development and is often required to make forward progress. When you deprecate part of your public API (if it exists), you should do two things: (1) update your documentation to let users know about the change and (2) issue a breaking release with the deprecation in place.
 
 ### Is "v1.2.3" a chronologic version?
 
